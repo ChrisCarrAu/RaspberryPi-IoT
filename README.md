@@ -50,3 +50,20 @@ Raspberry Pi Details:
   * This Raspberry Pi supports user-level GPIO access.
 ```
 
+So now I know that the correct version of WiringPi is installed - all looking good so far... but calling
+
+```
+sudo node index.js '<YOUR AZURE IOT HUB DEVICE CONNECTION STRING>'
+```
+
+still gives me the error
+
+```text
+Unable to determine hardware version. I see: Hardware : BCM2835
+,
+
+expecting BCM2708 or BCM2709. Please report this to projects@drogon.net
+```
+
+So index.js is referencing the wrong version...
+
