@@ -67,3 +67,30 @@ expecting BCM2708 or BCM2709. Please report this to projects@drogon.net
 
 So index.js is referencing the wrong version...
 
+From [Pi4J fails with Rpi 4.9.35 kernel - Unable to determine hardware version from wiringpi lib #349](https://github.com/Pi4J/pi4j/issues/349) I understand that 
+
+From [here](https://github.com/Azure-Samples/iot-hub-node-raspberrypi-client-app/issues/15) I discovered a quick workaround - run
+
+```text
+npm install wiringpi-node
+```
+
+And now reference this from index.js
+
+```text
+cd
+cd iot-hub-node-raspberrypi-client-app
+nano index.js
+```
+
+find where it says require('wiring-pi') and replace with require('wiringpi-node') - that you just installed. Now when I run it...
+
+```text
+/home/pi/iot-hub-node-raspberrypi-client-app/node_modules/az-iot-bi/node_modules/applicationinsights/AutoCollection/Exceptions.js:27
+                        throw error;
+                        ^
+ArgumentError: The connection string is missing the property: DeviceId
+```
+
+Aaargh! Why can't this be simple???
+
