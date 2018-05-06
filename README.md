@@ -27,5 +27,26 @@ I noticed that running
 gpio -v
 ````
 
-also gave the same error, and following these steps I managed to upgrade WiringPi to the correct version.
+also gave the same error, and following [these steps](http://wiringpi.com/download-and-install/) (Plan A) I managed to upgrade WiringPi to the correct version:
+
+Now, running
+
+```text
+gpio -v
+````
+
+gives me:
+
+```text
+gpio version: 2.46
+Copyright (c) 2012-2018 Gordon Henderson
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type: gpio -warranty
+
+Raspberry Pi Details:
+  Type: Pi 3, Revision: 02, Memory: 1024MB, Maker: Embest
+  * Device tree is enabled.
+  *--> Raspberry Pi 3 Model B Rev 1.2
+  * This Raspberry Pi supports user-level GPIO access.
+```
 
