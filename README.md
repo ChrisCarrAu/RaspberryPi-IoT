@@ -83,14 +83,10 @@ cd iot-hub-node-raspberrypi-client-app
 nano index.js
 ```
 
-find where it says require('wiring-pi') and replace with require('wiringpi-node') - that you just installed. Now when I run it...
+find where it says require('wiring-pi') and replace with require('wiringpi-node').
+If you're not familiar with nano, fear not ... to save the change, type Ctrl-O and press Enter, then Ctrl-X to close the editor
 
-```text
-/home/pi/iot-hub-node-raspberrypi-client-app/node_modules/az-iot-bi/node_modules/applicationinsights/AutoCollection/Exceptions.js:27
-                        throw error;
-                        ^
-ArgumentError: The connection string is missing the property: DeviceId
-```
+Now when I run it...
+...it works!!!
 
-Aaargh! Why can't this be simple???
-
+What I want to know is why can't these things ever just work out of the box???
